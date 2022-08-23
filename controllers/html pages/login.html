@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="./style.css">
+</head>
+<script>
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {	
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form action="http://localhost:3000/api/user/login" method="POST">
+    <div class="content">
+	<h1>Login</h1>
+      <div class="input-field">
+        <input type="email" placeholder="Email" id="emailId" autocomplete="nope" name="emailId" >
+      </div>
+      <div class="input-field">
+        <input type="password" placeholder="Password" id="password" autocomplete="new-password" name="password">
+      </div>
+<div class="input-field">
+        <input type="checkbox" onclick="myFunction()">Show Password
+    <div class="action">
+      <button id ="continue">Sign in</button>
+    </div>
+</div>
+      <a href="./enterEmailpage.html" class="link">Forgot Your Password?</a>
+    </div>
+  </form>
+<div style="text-align:center" >OR</div>
+<div class="content" ><a href="#0" class="link">Don't have an account?</a></div>
+  <div class="action">
+      <button onclick="document.location='./signup.html'">Register Now</button>
+</div>
+
+</div>
+
+</body>
+</html>
